@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <HeaderComp @search="getMovies"/>
-    <MainComp/>
+    <MainComp :moviesList="movies" :seriesList="series"
+    />
   </div>
 </template>
 
@@ -30,22 +31,19 @@ export default {
     },
 
     methods: {
-      getMovies(value){
-        console.log(this.movies);
-        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.key}&query=${value}`)
+      getMovies(userInput){
+        axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.key}&query=${userInput}`)
           .then((response)=>{
             this.movies = response.data.results;
-            console.log('sono dentro');
+            console.log('qui sotto i film');
             console.log(this.movies);
-            console.log(this.userInput);
           })
 
-          axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${this.key}&query=${value}`)
+          axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${this.key}&query=${userInput}`)
           .then((response)=>{
             this.series = response.data.results;
-            console.log('sono dentro');
+            console.log('qui sotto le serie');
             console.log(this.series);
-            console.log(this.userInput);
           })
           
       }
