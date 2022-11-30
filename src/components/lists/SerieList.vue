@@ -30,7 +30,7 @@ import SeriesCard from '../cards/SeriesCard.vue'
     }
 
     .series{
-        width: calc(100%/4);
+        width: calc(100%/3);
     }
 
 </style>

@@ -1,9 +1,14 @@
 <template>
     <main>
-        <h2>Movies</h2>
+        <div class="tempTitle">
+            <h2>Movies</h2>
+        </div>
+        
         <MovieList :movieArray="moviesList"
         />
-        <h2>Tv Series</h2>
+        <div class="tempTitle">
+            <h2>Tv Series</h2>
+        </div>
         <SerieList :serieArray="seriesList" />
     </main>
 </template>
@@ -28,7 +33,15 @@ import SerieList from './lists/SerieList.vue'
 <style lang="scss" scoped>
 
     main{
-        background-color: blue;
+        background-color: black;
+        height: 85vh;
+        overflow: auto;
+    }
+
+    .tempTitle{
+        width: 80%;
+        margin: auto;
+        color: white;
     }
 
 </style>

@@ -30,6 +30,7 @@ export default {
       }
     },
 
+
     methods: {
       getMovies(userInput){
         axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.key}&query=${userInput}`)
@@ -55,5 +56,6 @@ export default {
 <style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  height: 100vh;
 }
 </style>

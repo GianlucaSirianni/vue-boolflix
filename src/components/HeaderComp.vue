@@ -3,6 +3,12 @@
     <div class="logoContainer">
         <img src="../assets/netflix-logo-png-2582.png" alt="">
     </div>
+    <div class="navBar">
+      <a href="#">Movies</a>
+      <a href="#">Tv Series</a>
+      <a href="#">Cartoons</a>
+      <a href="#">My List</a>
+    </div>
     <div class="inputContainer">
       <input
         type="text"
@@ -34,6 +40,8 @@ export default {
         justify-content: space-between;
         align-items: center;
         background-color: black;
+        height: 15vh;
+        
     }
 
     .logoContainer{
@@ -46,6 +54,18 @@ export default {
 
     .inputContainer{
         padding: 2rem;
+    }
+
+    a{
+      color: white;
+      text-decoration: none;
+    }
+
+    .navBar{
+      width: 400px;
+      display: flex;
+      justify-content: space-around;
+
     }
 
 </style>

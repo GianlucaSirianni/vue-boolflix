@@ -30,6 +30,6 @@ import MovieCards from '../cards/MovieCards.vue'
     }
 
     .movies{
-        width: calc(100%/4);
+        width: calc(100%/3);
     }
 </style>
