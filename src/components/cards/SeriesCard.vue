@@ -104,4 +104,8 @@ export default {
   background: linear-gradient(0deg, #00000088 60%, #ffffff44 100%);
 }
 
+.fa-star{
+  color: goldenrod;
+}
+
 </style>
