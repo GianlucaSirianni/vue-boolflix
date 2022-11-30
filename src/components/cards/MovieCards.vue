@@ -5,9 +5,7 @@
       <div class="card-body">
         <h5 class="card-title">{{ movie.title }}</h5>
         <h5 class="card-title">{{ movie.original_title }}</h5>
-        <p class="card-text">
-            {{movie.original_language }}
-        </p>
+        <img :src="require(`../flagImg/${movie.original_language}.png`)">
       </div>
     </div>
   </div>
@@ -19,6 +17,10 @@ export default {
   props: {
     movie: Object,
   },
+
+  methods: {
+    
+  }
 };
 </script>
 

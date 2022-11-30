@@ -26,6 +26,7 @@ import SeriesCard from '../cards/SeriesCard.vue'
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
+        padding: 1rem;
     }
 
     .series{
