@@ -2,7 +2,7 @@
     <div>
         <SeriesCard
         v-for="(element, index) in serieArray" :key="index" :serie="element"
-        />
+        class="series"/>
     </div>
 </template>
 
@@ -20,5 +20,16 @@ import SeriesCard from '../cards/SeriesCard.vue'
 </script>
 
 <style lang="scss" scoped>
+    div{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .series{
+        width: calc(100%/4);
+    }
 
 </style>

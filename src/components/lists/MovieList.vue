@@ -2,7 +2,7 @@
     <div>
         <MovieCards
         v-for="(elem, index) in movieArray" :key="index" :movie="elem"
-        />
+        class="movies"/>
     </div>
 </template>
 
@@ -20,5 +20,15 @@ import MovieCards from '../cards/MovieCards.vue'
 </script>
 
 <style lang="scss" scoped>
+        div{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 
+    .movies{
+        width: calc(100%/4);
+    }
 </style>
