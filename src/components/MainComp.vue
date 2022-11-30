@@ -1,9 +1,11 @@
 <template>
-    <div>
+    <main>
+        <h2>Movies</h2>
         <MovieList :movieArray="moviesList"
         />
+        <h2>Tv Series</h2>
         <SerieList :serieArray="seriesList" />
-    </div>
+    </main>
 </template>
 
 <script>
@@ -24,5 +26,9 @@ import SerieList from './lists/SerieList.vue'
 </script>
 
 <style lang="scss" scoped>
+
+    main{
+        background-color: blue;
+    }
 
 </style>
