@@ -1,7 +1,7 @@
 <template>
     <div>
         <SeriesCard
-        v-for="(elem, index) in serieArray" :key="index" :serie="elem"
+        v-for="(element, index) in serieArray" :key="index" :serie="element"
         />
     </div>
 </template>
