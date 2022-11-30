@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="card" style="width: 18rem">
+    <div class="card">
       <img
         :src="`http://image.tmdb.org/t/p/w342/${serie.backdrop_path}`"
         class="card-img-top"
