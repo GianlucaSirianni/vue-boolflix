@@ -13,9 +13,13 @@
           <h6>{{ movie.original_title }}</h6>
         </div>
 
+        <div class="overviewContainer">
+          <p>{{movie.overview}}</p>
+        </div>
+
         <div class="langVote">
 
-          <img :src="require(`../flagImg/${movie.original_language}.png`)">
+          <img :src="require(`../flagImg/${movie.original_language}.png`)" class="bandiera">
           <p>Voto:
             <font-awesome-icon icon="fa-solid fa-star" v-for="(index) in this.vote" :key='index' />
             <font-awesome-icon icon="fa-regular fa-star" v-for="(index) in 5 - this.vote" :key='index' />
@@ -58,6 +62,12 @@ export default {
 
 <style lang="scss" scoped>
 
+.bandiera{
+  width: 30px;
+  height: 20px;
+  margin-right: 20px;
+}
+
 .cardContainer{
   width: 370px;
   height: 200px;
@@ -70,7 +80,20 @@ export default {
     justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 100px;
+    position: absolute;
+    bottom: 1px;
+    
+}
+
+.overviewContainer{
+  color: whitesmoke;
+  height: 70px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.overviewContainer::-webkit-scrollbar {
+    display: none;
 }
 
 .imageP{
@@ -107,6 +130,10 @@ export default {
 
 .fa-star{
   color: goldenrod;
+}
+
+.titles{
+  padding: 5px;
 }
 
 </style>

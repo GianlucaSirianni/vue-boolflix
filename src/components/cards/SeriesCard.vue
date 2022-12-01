@@ -13,9 +13,13 @@
           <h6>{{ serie.original_name }}</h6>
         </div>
 
+        <div class="overviewContainer">
+          <p>{{serie.overview}}</p>
+        </div>
+
         <div class="langVote">
 
-          <img :src="require(`../flagImg/${serie.original_language}.png`)">
+          <img :src="require(`../flagImg/${serie.original_language}.png`)" class="bandiera">
           <p>Voto:
             <font-awesome-icon icon="fa-solid fa-star" v-for="(index) in this.vote" :key='index' />
             <font-awesome-icon icon="fa-regular fa-star" v-for="(index) in 5 - this.vote" :key='index' />
@@ -69,7 +73,21 @@ export default {
     justify-content: space-between;
     margin-left: 10px;
     margin-right: 10px;
-    margin-top: 100px;
+    position: absolute;
+    bottom: 1px;
+}
+
+.overviewContainer{
+  color: whitesmoke;
+  height: 70px;
+  padding: 10px;
+  overflow: auto;
+}
+
+.bandiera{
+  width: 30px;
+  height: 20px;
+  margin-right: 20px;
 }
 
 
