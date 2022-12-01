@@ -6,7 +6,7 @@
         
         <MovieList :movieArray="moviesList"
         />
-        <div class="tempTitle">
+        <div class="tempTitle seriesTitleH">
             <h2>Tv Series</h2>
         </div>
         <SerieList :serieArray="seriesList" />
@@ -42,6 +42,10 @@ import SerieList from './lists/SerieList.vue'
         width: 80%;
         margin: auto;
         color: white;
+    }
+
+    .seriesTitleH{
+        margin-top: 300px;
     }
 
 </style>

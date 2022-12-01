@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logoContainer">
-        <img src="../assets/netflix-logo-png-2582.png" alt="">
+      <img src="../assets/netflix-logo-png-2582.png" alt="" onClick="window.location.reload();">
     </div>
     <div class="navBar">
       <a href="#">Movies</a>
@@ -9,14 +9,14 @@
       <a href="#">Cartoons</a>
       <a href="#">My List</a>
     </div>
-    <div class="inputContainer">
-      <input
-        type="text"
-        placeholder="Search a movie or a series"
-        v-model="userInput"
-        @keyup.enter="$emit('search', userInput)"
-      />
-    </div>
+
+
+    <div class="input-group mb-3 inputContainer">
+  <span class="input-group-text" id="basic-addon1"> <font-awesome-icon icon="fa-solid fa-magnifying-glass" /> </span>
+  <input type="text" class="form-control" placeholder="Search a movie or a series" aria-label="Search a movie or a series" aria-describedby="basic-addon1" v-model="userInput"
+        @keyup.enter="$emit('search', userInput)">
+</div>
+
   </header>
 </template>
 
@@ -34,6 +34,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 
     header{
         display:flex;
@@ -54,6 +55,7 @@ export default {
 
     .inputContainer{
         padding: 2rem;
+        width: 400px;
     }
 
     a{

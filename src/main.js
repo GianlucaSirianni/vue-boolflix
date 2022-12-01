@@ -14,7 +14,7 @@ import {
   faStar as faStarSolid,
 } from "@fortawesome/free-solid-svg-icons";
 
-import { faStar as faStarRegular } from "@fortawesome/free-regular-svg-icons";
+import { faStar as faStarRegular} from "@fortawesome/free-regular-svg-icons";
 
 
 library.add(faUserSecret, faMagnifyingGlass, faStarRegular, faStarSolid);

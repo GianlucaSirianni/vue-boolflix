@@ -82,7 +82,13 @@ export default {
   height: 70px;
   padding: 10px;
   overflow: auto;
+  
 }
+
+.overviewContainer::-webkit-scrollbar {
+    display: none;
+}
+
 
 .bandiera{
   width: 30px;
